@@ -1,0 +1,42 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.status {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.track-scores {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.add-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 85%;
+}
+
+.track-details {
+  border: 2px solid;
+  width: 80%;
+}
+
+.track-details ul li:nth-child(even) {
+  background-color: rgb(193, 193, 193);
+}
