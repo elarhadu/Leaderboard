@@ -3,9 +3,8 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+button {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .track {
@@ -22,21 +21,33 @@ ul {
 .track-scores {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
 }
 
 .add-scores {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 85%;
 }
 
 .track-details {
   border: 2px solid;
-  width: 80%;
+  width: 245px;
 }
 
-.track-details ul li:nth-child(even) {
+.track-details div:nth-child(even) {
   background-color: rgb(193, 193, 193);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -13px;
+  width: 185px;
+}
+
+.submit-button {
+  display: flex;
+  flex-direction: row-reverse;
 }
