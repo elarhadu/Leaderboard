@@ -97,6 +97,7 @@ $ npm start
 ### Open page in browser
 ```bash
 $ open src/index.html
+```
 
 ## Author
 
