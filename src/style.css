@@ -47,6 +47,12 @@ button {
   width: 185px;
 }
 
+.input-score {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .submit-button {
   display: flex;
   flex-direction: row-reverse;
