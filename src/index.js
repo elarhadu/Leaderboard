@@ -1,4 +1,5 @@
 import displayBoard from './modules/display.js';
+import fetchData from './modules/fetch.js';
 import './style.css';
 
 const newGame = async () => {
@@ -19,14 +20,14 @@ const newGame = async () => {
 
   const result = await response.json();
   return result;
-  // console.log(result);
 };
 
 newGame();
+fetchData();
 
 const refreshButton = document.getElementById('refresh-button');
 refreshButton.addEventListener('click', async () => {
-  const gameId = 'aXlNuRsfySWf8mThxcIh';
+  const gameId = 'Ttc0Z4NnGUfsGkYfGuJB';
 
   const response = await fetch(
     `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`,
@@ -35,8 +36,6 @@ refreshButton.addEventListener('click', async () => {
   const data = result.result;
   displayBoard(data);
 });
-
-window.addEventListener('DOMContentLoaded', newGame);
 
 let gamerDetails = {
   user: '',
@@ -65,7 +64,7 @@ score.addEventListener('input', (e) => {
 const form = document.querySelector('.input-score');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const gameId = 'aXlNuRsfySWf8mThxcIh';
+  const gameId = 'Ttc0Z4NnGUfsGkYfGuJB';
 
   const response = await fetch(
     `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`,
