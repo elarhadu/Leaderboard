@@ -24,18 +24,22 @@
             <div class="track-scores">
               <div class="status">
                 <h2>Recent scores</h2>
-                <button>Refresh</button>
+                <div id="refresh-button"><button>Refresh</button></div>
+                
               </div>
               <div class="track-details"></div>
             </div>
             <div class="add-scores">
               <h2>Add your score</h2>
               <div class="input">
-                <input type="text" name="" id="" placeholder="Your name" />
-                <input type="number" name="" id="" placeholder="Your score" />
-                <div class="submit-button">
-                  <button type="submit">Submit</button>
-                </div>
+                <form class="input-score">
+                  <input type="text" name="" id="" placeholder="Your name" class="gamer-name"/>
+                  <input type="number" name="" id="" placeholder="Your score" class="score" />
+                  <div class="submit-button">
+                    <button type="submit">Submit</button>
+                  </div>
+                </form>
+                
               </div>
             </div>
           </div>
