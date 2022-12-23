@@ -14,6 +14,7 @@
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Author](#author)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -118,6 +119,17 @@ const fetchData = async () => {
 - GitHub: [@elarhadu](https://github.com/elarhadu/)
 - Twitter: [@elarh_](https://twitter.com/elarh_)
 - LinkedIn: [Emmanuella Adu](www.linkedin.com/in/emmanuella-adu/)
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [I will implement a filter that utilizes the API to organize the results by score.] **[new_feature_1]**
+- [I will add an error message if the user wants to add new items.] **[new_feature_2]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
