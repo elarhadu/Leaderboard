@@ -124,10 +124,8 @@ const fetchData = async () => {
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [I will implement a filter that utilizes the API to organize the results by score.] **[new_feature_1]**
-- [I will add an error message if the user wants to add new items.] **[new_feature_2]**
+- I will implement a filter that utilizes the API to organize the results by score.
+- I will add an error message if the user wants to add new items.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
