@@ -73,6 +73,41 @@ $ npm start
 ```bash
 $ open src/index.html
 ```
+### To generate the game ID
+```
+const newGame = async () => {
+  const gameTitle = {
+    name: 'Space Runners',
+  };
+
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(gameTitle),
+    },
+  );
+
+  const result = await response.json();
+  console.log(result);
+};
+newGame();
+```
+### To fetch the data from the backend and render it to the front end
+```
+const fetchData = async () => {
+  const gameId = 'copy id generated in the console';
+  const response = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`,
+  );
+  const result = await response.json();
+  const data = result.result;
+  displayBoard(data);
+};
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
