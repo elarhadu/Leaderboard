@@ -14,6 +14,7 @@
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Author](#author)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -73,6 +74,41 @@ $ npm start
 ```bash
 $ open src/index.html
 ```
+### To generate the game ID
+```
+const newGame = async () => {
+  const gameTitle = {
+    name: 'Space Runners',
+  };
+
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(gameTitle),
+    },
+  );
+
+  const result = await response.json();
+  console.log(result);
+};
+newGame();
+```
+### To fetch the data from the backend and render it to the front end
+```
+const fetchData = async () => {
+  const gameId = 'copy id generated in the console';
+  const response = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`,
+  );
+  const result = await response.json();
+  const data = result.result;
+  displayBoard(data);
+};
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,6 +119,15 @@ $ open src/index.html
 - GitHub: [@elarhadu](https://github.com/elarhadu/)
 - Twitter: [@elarh_](https://twitter.com/elarh_)
 - LinkedIn: [Emmanuella Adu](www.linkedin.com/in/emmanuella-adu/)
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- I will implement a filter that utilizes the API to organize the results by score.
+- I will add an error message if the user wants to add new items.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
