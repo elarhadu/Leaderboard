@@ -1,10 +1,49 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  color: rgb(157, 99, 159);
+}
+
+header h1 {
+  color: rgb(162, 140, 162);
+  font-size: 80px;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 10px rgb(158, 42, 40),
+      0 0 20px rgb(167, 206, 50),
+      0 0 30px rgb(79, 155, 99),
+      0 0 40px rgb(58, 149, 169),
+      0 0 50px rgb(186, 130, 203);
+  }
+
+  to {
+    text-shadow: 0 0 60px rgb(0, 200, 255), 0 0 70px #0fa;
+  }
+}
+
+h2 {
+  color: rgb(121, 79, 121);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+html {
+  background: url(../src/images/spacerunner.gif) no-repeat center fixed;
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 button {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: aqua;
+  transition: all 0.3s ease-in;
+  text-shadow: rgb(127, 28, 122) 8px 0 13px;
+  cursor: pointer;
 }
 
 .track {
@@ -33,10 +72,20 @@ button {
 .track-details {
   border: 2px solid;
   width: 245px;
+  height: 10vh;
+  overflow-y: scroll;
+}
+
+.track-details::-webkit-scrollbar {
+  display: none;
+}
+
+.track-details div:nth-child(odd) {
+  background-color: rgb(239, 168, 168);
 }
 
 .track-details div:nth-child(even) {
-  background-color: rgb(193, 193, 193);
+  background-color: rgb(131, 149, 214);
 }
 
 .input {
